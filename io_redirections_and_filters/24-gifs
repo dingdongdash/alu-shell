@@ -1,2 +1,5 @@
 #!/bin/bash
-while IFS= read -r f; do echo "${f%.gif}"; done < <(find . -type f -name '*.gif' -printf '%f\n') | LC_ALL=C sort -f
+while IFS= read -r f
+do
+    echo "${f%.gif}"
+done < <(find . -type f -name '*.gif' -printf '%f\n') | LC_ALL=C sort -f
