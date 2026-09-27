@@ -1,2 +1,4 @@
 #!/bin/bash
-awk '{printf toupper(substr($0,1,1))} END{print ""}'
+out=""
+while IFS= read -r line; do c="${line:0:1}"; out+="${c^^}"; done
+echo "$out"
