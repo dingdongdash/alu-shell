@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod $(stat -c %a alien) hello
+chmod $(ls -l alien | cut -c2-10 | sed "s/rwx/7/g;s/rw-/6/g;s/r-x/5/g;s/r--/4/g;s/-wx/3/g;s/-w-/2/g;s/--x/1/g;s/---/0/g") hello
