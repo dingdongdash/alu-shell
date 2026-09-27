@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod --reference=alien hello
+chmod $(stat -c %a alien) hello
